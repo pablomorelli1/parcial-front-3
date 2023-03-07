@@ -1,5 +1,5 @@
-import React from 'react'
-import  {Card}  from './Card'
+import React, { useState } from 'react'
+import  Card  from './Card'
 
 export const Form = () => {
 
@@ -32,7 +32,7 @@ export const Form = () => {
             <input type="text" value={user.colorFavorito} onChange={(e) => setUser({...user, colorFavorito: e.target.value})}/>
 
             <button>ENVIAR</button>
-            {err && 'Coloque la información correspondiente'}
+            {err && 'Coloque lo solicitado correctamente'}
         </form>
 
         {show && <Card nombre={user.nombre} medico={user.colorFavorito}/>}
