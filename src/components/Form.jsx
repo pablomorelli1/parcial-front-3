@@ -32,10 +32,10 @@ export const Form = () => {
             <input type="text" value={user.colorFavorito} onChange={(e) => setUser({...user, colorFavorito: e.target.value})}/>
 
             <button>ENVIAR</button>
-            {err && 'Coloque lo solicitado correctamente'}
+            {err && 'Por favor chequea que la informacion sea correcta'}
         </form>
 
-        {show && <Card nombre={user.nombre} medico={user.colorFavorito}/>}
+        {show && <Card nombre={user.nombre} colorFavorito={user.colorFavorito}/>}
     </div>
   )
 }
